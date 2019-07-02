@@ -1,0 +1,13 @@
+<h1>
+    TODO List</h1>
+<h2>A place to store the things you have to do! </h2>
+<input type="text" placeholder="filter your to-dos">
+<div *ngFor="let chore of toDoObjects, let i =index">
+
+    <p></p>>{{chore.task}}</p> <button>x</button>
+    <p ng-class="$chore ? 'class-if-true' : completeTrue 'class-if-false' :  completeFalse"></p>>{{chore.completed}}</p>
+
+</div>
+
+<input type="text" placeholder="add your to-do"><br>
+<button>add</button>
