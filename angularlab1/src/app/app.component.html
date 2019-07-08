@@ -1,13 +1,23 @@
-<h1>
-    TODO List</h1>
-<h2>A place to store the things you have to do! </h2>
-<input type="text" placeholder="filter your to-dos">
-<div *ngFor="let chore of toDoObjects, let i =index">
+<body>
+    <div class="entireList">
 
-    <p></p>>{{chore.task}}</p> <button>x</button>
-    <p ng-class="$chore ? 'class-if-true' : completeTrue 'class-if-false' :  completeFalse"></p>>{{chore.completed}}</p>
+        <h1>
+            TODO List</h1>
+        <h2>A place to store the things you have to do! </h2>
+        <input type="text" [(ngModel)]="filterInput" (input)="filterSearch()" placeholder="filter your to-dos" class='filterTodo'>
+        <div *ngFor="let chore of filteredToDo, let i =index"><button *ngIf="!chore.completed" class="completeButton" (click)="markComplete(chore)">complete</button>
+            <span [ngClass]="{completeTrue: chore.completed}">{{chore.task}}</span><i class="material-icons" (click)="removeTask(chore)">clear</i>
 
-</div>
 
-<input type="text" placeholder="add your to-do"><br>
-<button>add</button>
+
+
+
+
+
+        </div>
+
+        <input type="text" placeholder="add your to-do" class='addTodo' [(ngModel)]="taskInput" /><br>
+        <button (click)="addTask()" class="addButton">add</button>
+
+    </div>
+</body>

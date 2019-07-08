@@ -1,3 +1,58 @@
+.completeTrue {
+    text-decoration: line-through;
+}
+
+.entireList {
+    background-color: white;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+
 body {
-    background-color: #FF436B
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(237, 84, 140);
+    background: linear-gradient(90deg, rgba(237, 84, 140, 1) 0%, rgba(238, 84, 108, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    text-align: center;
+    width: 100%;
+}
+
+.filterTodo {
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.addTodo {
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.completeButton {
+    border: 1px;
+    border-style: solid;
+    border-color: #EE546E;
+    color: #EE546E;
+    border-radius: 5px;
+}
+
+.addButton {
+    width: 95%;
+    height: 30px;
+    background-color: #ED66B3;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1,
+h2 {
+    text-align: left;
+    padding: 2px;
 }
